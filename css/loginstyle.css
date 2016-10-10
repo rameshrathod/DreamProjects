@@ -16,10 +16,11 @@
     position: absolute;
     right: 0;
     margin-top:40px;
-    background-color:rgba(0,0,0,0.3);;
+    background-color:rgba(78, 10, 10, 1.00);;
     min-width: 142px;
     border:1px solid white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     margin-bottom: auto;
 }
 
 .dropdown-content a {

@@ -30,26 +30,26 @@
       <div id="templatemo_content">
 			<div class='regfrom'>
 		
-			<form style='text-align: left;' method = "get" action ="<?php echo base_url('index.php/')?>welcome/insertModel" name="register">
+			<form style='text-align: left;' method = "POST" action ="<?php echo base_url('index.php/')?>welcome/insertModel" name="register">
 		
 			<div class='regMsg'>
 			<?php
 			echo "<h1>Welcome to Registration page</h1>";
 			?>
 			</div>
-							<div class='reg_from_row'><input type ="text" id = "uname" placeholder = "user name" name = "uname" class="required noSpecialChars"></div>
+							<div class='reg_from_row'><label>User Name</label><input type ="text" id = "uname" name = "uname" class="required noSpecialChars"></div>
 							
 							<?php if(isset($_REQUEST['userExist']))
 		{
 		  echo "<font color='red'>User Name is Already exist !!! </font>"; //massage for user exists
 		}?>
-		                	<div class='reg_from_row'><input type ="text" id = "FirstName" placeholder = "First Name" name = "fname" class="required noSpecialChars1"></div>
-		                	<div class='reg_from_row'><input type ="text" id = "LastName" placeholder = "Last Name" name = "lname" class="required noSpecialChars2"></div>
-		                	<div class='reg_from_row'><label>+91</label><input type ="text" id = "mobNo" placeholder = "Mobile No." name = "mobNo" class="required noSpecialChars4" maxlength="10"></div>
+		                	<div class='reg_from_row'><label>First Name</label><input type ="text" id = "FirstName" name = "fname" class="required noSpecialChars1"></div>
+		                	<div class='reg_from_row'><label>Last Name</label><input type ="text" id = "LastName"  name = "lname" class="required noSpecialChars2"></div>
+		                	<div class='reg_from_row'><label>Mobile Number</label><label>+91</label><input type ="text" id = "mobNo"  name = "mobNo" class="required noSpecialChars4" maxlength="10"></div>
 		
-		              		<div class='reg_from_row'><input type = "password" id = "password" name = "pass" placeholder = "Create password" ></div>
+		              		<div class='reg_from_row'><label>Create Password</label><input type = "password" id = "password" name = "pass" ></div>
 		
-		              		<div class='reg_from_row'><input type = "password" id = "cpassword" name = "cpass" placeholder = "confirm password" class="required passwordMatch"></div>
+		              		<div class='reg_from_row'><label>Confirm Password</label><input type = "password" id = "cpassword"  name = "cpass"  class="required passwordMatch"></div>
 							
 		              		<?php
 		
@@ -91,7 +91,7 @@
 											echo "<div class='captch'>
 															<div class='captchaImg'>
 																<img src=".base_url()."captcha.jpg id='cImg'>
-																<input type='button' value='Refresh' id='refbutton' onclick='location.reload();'/>
+															<input type='button' value='Refresh' id='refbutton' onclick='location.reload();'/>
 															
 												
 													</div>
@@ -105,6 +105,7 @@
 						?>
 		               		 
 		   						 <input type = "submit" id='regButton' value = "Register">
+		   						 </form>
 		   						        
  		 </div>
   								<?php 
@@ -126,7 +127,7 @@
 
 		   						 ?>
 		   						
-		</form>
+		
 		</div>
 <div id="templatemo_footer">
         <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Projects</a> | <a href="#">About Us</a> | <a href="#">Contact Us</a> | <a href="#">Register</a><br />

@@ -40,6 +40,7 @@ p{
 .spacetobottom {
 	clear: both;
 	height: 50px;
+	background-color: #4e0a0a;
 }
 
 .spacetoright {
@@ -56,7 +57,7 @@ p{
 form{
 	margin: 0px 10px 0px 0px;
 	padding: 0px;
-	text-align: right;	
+	text-align: left;	
 }
 
 label {
@@ -81,9 +82,10 @@ input{
     padding-left: 5px;
 }
 
-.button{
+.button1{
 	width: 60px;
 	height: 25px;
+	margin-left:10px;
 }
 /* End of Form */
 
@@ -104,10 +106,13 @@ input{
 
 #templatemo_wrapper1 {
 	background: url(../images/maintopBG.gif) top repeat-x;
+	
 }
 
 #templatemo_wrapper2 {
 	background: url(../images/mainbuttomBG.gif) bottom repeat-x;
+	background-color: rgb(78, 10, 10);
+	
 }
 
 #templatemo_container {
@@ -120,8 +125,10 @@ input{
 	float: left;
 	width: 930px;
 	height: 40px;
-	margin: 18px 0 0 0;
+	margin: 0px 0 0px 0;
 	padding: 0 0 0 30px;
+	position: fixed;
+	background-color: #4e0a0a;
 }
 
 #templatemo_menu ul {
@@ -165,7 +172,7 @@ input{
 	width: 900px;
 	height: 268px;
 	padding: 0 30px;
-	margin-top: 2px;
+	margin-top: 50px;
 }
 
 #logo{
@@ -229,7 +236,7 @@ input{
     width: 280px;
     padding: 20px 20px 0 10px;
     margin-top: 30px;
-    background: url(../images/leftcolumnBG.gif) top center no-repeat;
+    /*background: url(../images/leftcolumnBG.gif) top center no-repeat;*/
 }
 
 .login_form{
@@ -362,7 +369,7 @@ input{
 .regfrom{
 	       
 	border: 1px solid;
-    width: 400px;
+    width: 500px;
     padding: 20px;
     /* border-color: greenyellow; */
     box-shadow: 0px 10px 80px white;

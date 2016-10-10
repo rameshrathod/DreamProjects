@@ -8,7 +8,7 @@ if (isset ( $_REQUEST ['sts'] )) {
 															echo "<font color='red'><label id='msg'>Invalid username or password !</label></font>"; // massage for invalid user
 														}
 														?>
-          						<form method="get"
+          						<form method="POST"
 		action="<?php echo base_url('index.php/welcome/userLogin')?>"
 		name='myform'>
 		<div class="form_row">
@@ -17,7 +17,9 @@ if (isset ( $_REQUEST ['sts'] )) {
 		<div class="form_row">
 			<label>Password</label><input name="upass" type="password" class="inputfield" id="password" maxlength="60" />
 		</div>
-		<a href="<?php echo base_url('index.php/welcome/register')?>">click here for register</a>
-		<input class="button" type="submit" name="Submit" value="Login" />
+		<a href="<?php echo base_url('index.php/welcome/register')?>">click here for register</a><input class="button1" type="submit" name="Submit" value="Login" />
+		
+		
+		
 	</form>
 </div>

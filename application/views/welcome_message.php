@@ -6,6 +6,8 @@
 <title>dream Projects</title>
 <meta name="keywords" content="city night layout, free template, CSS, HTML" />
 <meta name="description" content="City Night layout is a free website template provided by templatemo.com" />
+
+<link href="<?php echo base_url()?>css/expandcss.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url()?>css/common.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url()?>css/loginstyle.css" rel="stylesheet" type="text/css" />
 <script src="<?php echo base_url()?>js/jquery.js"></script>
@@ -20,7 +22,9 @@
     
 					<?php include_once './application/views/menuAnchors.php';
 					
+					
 						  include_once './application/views/banner.php';
+						  
 					
 					?>
      <div id="templatemo_content">
