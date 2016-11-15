@@ -4,14 +4,15 @@
 			<li>
 			
 				<div class="dropdown" style="float:left;">
-					<a href="<?php echo base_url('index.php/services')?>" class="dropbtn" >Services</a>
-				  	<div class="dropdown-content" style="left:0;">
+					<a href="<?php echo base_url('index.php/service')?>" class="dropbtn" >Services</a>
+				  	<div class="dropdown-content" style="left:0;">	  
 				  <?php 
 				  foreach ($welcomePageDisplayData[0] as $s_anchor){
 						$i=0;
 						for ($i;$i<count($s_anchor);$i++)
 						{
-						echo '<a href="'.base_url('index.php/').'">'.$s_anchor[$i]->anchor_name.'</a>';
+						
+						echo '<a href="'.base_url('index.php/').$s_anchor[$i]->controllerName."/".$s_anchor[$i]->methodName.'">'.$s_anchor[$i]->anchor_name.'</a>';
 						
 						}
 				  }
@@ -24,7 +25,7 @@
 			<li>
 			
 				<div class="dropdown" style="float:left;">
-					<a href="<?php echo base_url('index.php/products')?>" class="dropbtn" >Products</a>
+					<a href="<?php echo base_url('index.php/product')?>" class="dropbtn" >Products</a>
 				  	<div class="dropdown-content" style="left:0;">
 				  <?php 
 				  
@@ -32,8 +33,7 @@
 					$i=0;
 					for ($i;$i<count($prodanchor);$i++)
 					{
-					echo '<a href="'.base_url('index.php').'">'.$prodanchor[$i]->anchor_name.'</a>';
-
+					echo '<a href="'.base_url('index.php/').$prodanchor[$i]->controllerName."/".$prodanchor[$i]->methodName.'">'.$prodanchor[$i]->anchor_name.'</a>';
 					}
 				  }
 				  
@@ -66,7 +66,7 @@
 				  }
 				  ?>
 				  </div>
-            
+          
             </div>
             </li> 
             <?php }else{?>

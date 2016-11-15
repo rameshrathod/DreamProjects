@@ -24,6 +24,11 @@ class Welcome extends CI_Controller {
 		$this->session->sess_destroy ();
 		header ( "location:" . base_url ( 'index.php' ) . "" );
 	}
+	public function myProfile() { // for logout
+		$this->load->model ( 'MyModel' );
+		$welcomePageDisplayData ['welcomePageDisplayData'] = $this->MyModel->LoginAllContent ();
+		$this->load->view ( 'myProfile1', $welcomePageDisplayData );
+	}
 	public function userLogin() 	// for login
 	{
 		$uname = $_REQUEST ['uid'];
@@ -55,7 +60,7 @@ class Welcome extends CI_Controller {
 		}
 	}
 	public function insertModel() {
-		if (strtoupper ( $_GET ['cap'] ) == strtoupper ( $_REQUEST ['val_cap'] )) {
+		if (strtoupper ( $_POST ['cap'] ) == strtoupper ( $_POST ['val_cap'] )) {
 			$flag = 0;
 			// Write your code, that will be executed once successful captcha entry...
 			$this->load->model ( 'MyModel' );
@@ -64,17 +69,17 @@ class Welcome extends CI_Controller {
 			
 			foreach ( $dataForUserCheck as $r ) {
 				
-				if ($r->username == $_GET ['uname']) {
+				if ($r->username == $_POST ['uname']) {
 					$flag = $flag + 1;
 				}
 			}
 			if ($flag != 1) {
 				$data = array (
-						'username' => $_GET ['uname'],
-						'password' => MD5 ( $_GET ['pass'] ),
-						'mobileNumber' => $_GET ['mobNo'],
-						'firstname' => $_GET ['fname'],
-						'lastname' => $_GET ['lname'] 
+						'username' => $_POST ['uname'],
+						'password' => MD5 ( $_POST ['pass'] ),
+						'mobileNumber' => $_POST ['mobNo'],
+						'firstname' => $_POST ['fname'],
+						'lastname' => $_POST ['lname'] 
 				);
 				
 				$this->MyModel->Insert ( $data );
